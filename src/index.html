@@ -11,13 +11,21 @@
     <div class="container">
         <nav class="navbar">
             <div class="nav-links">
+                <a href="#home" class="nav-link home-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                    </svg>
+                </a>
                 <a href="#research" class="nav-link">Research</a>
                 <a href="#projects" class="nav-link">Projects</a>
-                <a href="#cv" class="nav-link active">CV</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#cv" class="nav-link">CV</a>
             </div>
         </nav>
 
-        <main class="main-content">
+        <main id="content-area">
+            <!-- Fixed Left Section -->
             <div class="left-section">
                 <div class="profile-picture">
                     <img src="../img/profile.jpg" alt="Vickey Ghimire" id="profile-img">
@@ -35,16 +43,98 @@
                 </div>
             </div>
 
+            <!-- Right Section - Content Pages -->
             <div class="right-section">
-                <h1 class="name">Vickey Ghimire</h1>
-                <p class="skills">Software | ML | NLP</p>
-                <div class="about-section">
-                    <p class="about-text">
-                        <p> Hi!</p> 
-                        I am Vickey, currently an undergraduate student passionate about software development, 
-                        machine learning, and natural language processing. I enjoy working on innovative 
-                        projects that combine cutting-edge technology with real-world applications.
-                    </p>
+                <!-- Home Page -->
+                <div id="home" class="page-content active">
+                    <h1 class="name">Vickey Ghimire</h1>
+                    <p class="skills">Software | ML | NLP</p>
+                    <div class="about-section">
+                        <p class="about-text">
+                            Hi! I am Vickey, currently an undergraduate student passionate about software development, 
+                            machine learning, and natural language processing. I enjoy working on innovative 
+                            projects that combine cutting-edge technology with real-world applications.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Education Page -->
+                <div id="education" class="page-content">
+                    <h2 class="section-title">Education</h2>
+                    <div class="entry-container">
+                        <div class="entry-box">
+                            <div class="entry-header">
+                                <div class="entry-title">Northern Kentucky University</div>
+                                <div class="entry-location">Highland Heights, KY</div>
+                            </div>
+                            <div class="entry-subtitle">B.S. in Computer Science</div>
+                            <div class="entry-date">Expected May 2026</div>
+                            <div class="entry-details">
+                                <div>Minors: Mathematics and CIT</div>
+                                <div>GPA: 3.922</div>
+                                <div>EDGE AWARD, President's Honors List</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Page -->
+                <div id="experience" class="page-content">
+                    <h2 class="section-title">Experience</h2>
+                    <div class="entry-container">
+                        <div class="entry-box">
+                            <div class="entry-header">
+                                <div class="entry-title">Business Services Supervisor</div>
+                                <div class="entry-location">NKU Campus Recreation Center</div>
+                            </div>
+                            <div class="entry-date">from-present</div>
+                            <div class="entry-details">
+                                <div>Duties</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research Page -->
+                <div id="research" class="page-content">
+                    <h2 class="section-title">Research</h2>
+                    <div class="entry-container">
+                        <div class="entry-box">
+                            <div class="entry-title">Research Area</div>
+                            <div class="entry-subtitle">Description of your research</div>
+                            <div class="entry-details">
+                                <div>Add your research details here</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects Page -->
+                <div id="projects" class="page-content">
+                    <h2 class="section-title">Projects</h2>
+                    <div class="entry-container">
+                        <div class="entry-box">
+                            <div class="entry-title">Project Name</div>
+                            <div class="entry-subtitle">Project Description</div>
+                            <div class="entry-details">
+                                <div>Add your project details here</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CV Page -->
+                <div id="cv" class="page-content">
+                    <h2 class="section-title">CV</h2>
+                    <div class="entry-container">
+                        <div class="entry-box">
+                            <div class="entry-title">Curriculum Vitae</div>
+                            <div class="entry-subtitle">Download my CV</div>
+                            <div class="entry-link">
+                                <a href="#" target="_blank">Download CV [PDF]</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
