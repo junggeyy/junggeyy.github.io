@@ -70,4 +70,19 @@ document.addEventListener('DOMContentLoaded', function() {
     if (initialLink) {
         updateActiveNav(initialLink);
     }
+    
+    // Handle collapsible entry boxes
+    const entryBoxes = document.querySelectorAll('.entry-box');
+    
+    entryBoxes.forEach(box => {
+        box.addEventListener('click', function(e) {
+            // Don't toggle if clicking on a link inside the box
+            if (e.target.tagName === 'A' || e.target.closest('a')) {
+                return;
+            }
+            
+            // Toggle the expanded class
+            this.classList.toggle('expanded');
+        });
+    });
 }); 

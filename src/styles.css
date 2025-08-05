@@ -200,16 +200,66 @@ body {
 }
 
 .entry-box {
-    background-color: #f8f8f8;
-    border: 1px solid #e0e0e0;
+    background-color: #fafafa;
+    border: 1px solid #f0f0f0;
     border-radius: 8px;
-    padding: 24px;
-    margin-bottom: 20px;
-    transition: box-shadow 0.2s ease;
+    padding: 20px;
+    margin-bottom: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
 }
 
 .entry-box:hover {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f5f5f5;
+    border-color: #e8e8e8;
+}
+
+.entry-box.expanded {
+    background-color: #f8f8f8;
+    border-color: #e0e0e0;
+}
+
+.entry-box-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.entry-box-content {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.entry-toggle-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    transition: transform 0.3s ease;
+    color: #666666;
+}
+
+.entry-box.expanded .entry-toggle-icon {
+    transform: rotate(90deg);
+}
+
+.entry-details {
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.6;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding-top: 0;
+}
+
+.entry-box.expanded .entry-details {
+    max-height: 200px;
+    padding-top: 16px;
+    margin-top: 12px;
+    border-top: 1px solid #f0f0f0;
 }
 
 .entry-header {
@@ -217,6 +267,8 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 8px;
+    width: 100%;
+    gap: 20px;
 }
 
 .entry-title {
@@ -224,12 +276,14 @@ body {
     font-weight: 600;
     color: #333333;
     margin-bottom: 4px;
+    flex: 1;
+    min-width: 0;
 }
 
 .entry-location {
     font-size: 14px;
     color: #666666;
-    text-align: right;
+    text-align: left;
     min-width: 120px;
 }
 
@@ -302,11 +356,13 @@ body {
     .entry-header {
         flex-direction: column;
         align-items: flex-start;
+        gap: 8px;
     }
     
     .entry-location {
         text-align: left;
         margin-top: 4px;
+        min-width: auto;
     }
 }
 
