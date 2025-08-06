@@ -81,8 +81,43 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
+            // Don't toggle if clicking on research tabs
+            if (e.target.classList.contains('research-tab')) {
+                return;
+            }
+            
             // Toggle the expanded class
             this.classList.toggle('expanded');
         });
     });
+    
+    // Handle research tab switching
+    const researchTabs = document.querySelectorAll('.research-tab');
+    
+    researchTabs.forEach(tab => {
+        tab.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent box toggle
+            
+            const targetId = this.getAttribute('data-tab');
+            const box = this.closest('.entry-box');
+            
+            // Remove active class from all tabs in this box
+            box.querySelectorAll('.research-tab').forEach(t => t.classList.remove('active'));
+            
+            // Add active class to clicked tab
+            this.classList.add('active');
+            
+            // Hide all content in this box
+            box.querySelectorAll('.research-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Show target content
+            const targetContent = document.getElementById(targetId);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        });
+    });
+    
 }); 
