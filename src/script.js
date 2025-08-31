@@ -41,13 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    const socialButtons = document.querySelectorAll('.social-btn');
-    
-    socialButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            console.log('Social link clicked:', this.textContent);
-        });
-    });
+
     
     // Handle browser back/forward buttons
     window.addEventListener('popstate', function() {
@@ -86,10 +80,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
+
+            
             // Toggle the expanded class
             this.classList.toggle('expanded');
         });
     });
+    
+
     
     // Handle research tab switching
     const researchTabs = document.querySelectorAll('.research-tab');

@@ -198,7 +198,7 @@ body {
     font-size: 32px;
     font-weight: 600;
     color: #333333;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     text-align: center;
 }
 
@@ -217,6 +217,13 @@ body {
 .entry-container {
     max-width: 85%;
     margin: 0 auto;
+}
+
+.section-hint {
+    font-size: 10px;
+    color: #888888;
+    margin-bottom: 1px;
+    font-weight: 400;
 }
 
 .entry-box {
@@ -261,17 +268,39 @@ body {
 }
 
 .entry-toggle-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 12px;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
     transition: transform 0.3s ease;
-    color: #666666;
+    color: #6A7B8F;
     flex-shrink: 0;
     margin-top: 2px;
+    stroke-width: 3;
 }
 
 .entry-box.expanded .entry-toggle-icon {
-    transform: rotate(90deg);
+    transform: rotate(180deg);
+}
+
+/* Subtle visual cues for expandable boxes */
+.entry-box {
+    position: relative;
+}
+
+.entry-box::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #f0f0f0, transparent);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.entry-box:hover::after {
+    opacity: 1;
 }
 
 .entry-details {
