@@ -164,7 +164,7 @@ body {
 }
 
 .about-section {
-    max-width: 600px;
+    max-width: 500px;
 }
 
 .about-text {
@@ -172,6 +172,7 @@ body {
     color: #555555;
     line-height: 1.7;
     font-weight: 400;
+    text-align: justify;
 }
 
 /* Page Content */
@@ -215,7 +216,7 @@ body {
 }
 
 .entry-container {
-    max-width: 85%;
+    max-width: 75%;
     margin: 0 auto;
 }
 
@@ -311,10 +312,11 @@ body {
     overflow: hidden;
     transition: max-height 0.3s ease, padding 0.3s ease;
     padding-top: 0;
+    text-align: justify;
 }
 
 .entry-box.expanded .entry-details {
-    max-height: 400px;
+    max-height: none;
     padding-top: 16px;
     margin-top: 12px;
     border-top: 1px solid #f0f0f0;
@@ -386,6 +388,7 @@ body {
     font-size: 14px;
     line-height: 1.6;
     color: #555555;
+    text-align: justify;
 }
 
 .research-poster {
@@ -605,6 +608,10 @@ body {
     
     .name {
         font-size: 36px;
+    }
+    
+    .skills {
+        text-align: center;
     }
     
     .nav-links {
