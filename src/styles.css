@@ -5,6 +5,50 @@
     box-sizing: border-box;
 }
 
+.counter-wrapper {
+    text-align: right;
+    margin-top: 15px;
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.counter-wrapper * {
+    text-align: right !important;
+    margin: 0 !important;
+    display: inline !important;
+}
+
+#wso_div,
+div[id*="wso"],
+script + div,
+body > div:last-child,
+.counter-wrapper > div,
+.counter-wrapper div {
+    text-align: right !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: inline !important;
+    position: static !important;
+    width: auto !important;
+}
+
+#wso_div font,
+#wso_div *,
+div[id*="wso"] font,
+div[id*="wso"] *,
+.counter-wrapper font,
+.counter-wrapper * {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size: 22px !important;
+    color: #555555 !important;
+    font-weight: 400 !important;
+    text-align: right !important;
+    line-height: 1.7 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #ffffff;
