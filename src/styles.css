@@ -70,7 +70,7 @@ body {
 /* Main Content Area */
 #content-area {
     display: flex;
-    gap: 80px;
+    gap: 50px;
     padding: 60px 0;
     align-items: flex-start;
 }
@@ -82,7 +82,8 @@ body {
     flex-direction: column;
     gap: 30px;
     position: sticky;
-    top: 120px;
+    top: 140px;
+    padding-top: 20px;
 }
 
 /* Profile Picture */
@@ -153,6 +154,7 @@ body {
     color: #333333;
     margin-bottom: 12px;
     line-height: 1.2;
+    text-align: center;
 }
 
 .skills {
@@ -160,11 +162,12 @@ body {
     color: #666666;
     font-weight: 400;
     margin-bottom: 30px;
-    text-align: left;
+    text-align: center;
 }
 
 .about-section {
-    max-width: 500px;
+    max-width: 75%;
+    margin: 0 auto;
 }
 
 .about-text {
