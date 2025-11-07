@@ -108,7 +108,7 @@
                             </div>
                             <div class="entry-details">
                                 <div>Minors: Mathematics and CIT</div>
-                                <div>GPA: 3.922</div>
+                                <div>GPA: 3.925</div>
                                 <div>Honors: EDGE AWARD, President's Honors List</div>
                             </div>
                         </div>
@@ -118,8 +118,32 @@
                 <!-- Experience Page -->
                 <div id="experience" class="page-content">
                     <h2 class="section-title">Experience</h2>
+                        <div class="entry-container">
+                            <div class="section-hint">Click entry for details</div>
+                        <div class="entry-box">
+                            <div class="entry-box-header">
+                                <div class="entry-box-content">
+                                    <svg class="entry-toggle-icon" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M7 10l5 5 5-5z"/>
+                                    </svg>
+                                    <div>
+                                        <div class="entry-header">
+                                            <div class="entry-title">Python-Django Developer</div>
+                                        </div>
+                                        <div class="entry-location">Department of Physics, Geology & Engineering Technology, NKU</div>
+                                    </div>
+                                </div>
+                                <div class="entry-date">Fall 2025 - Present</div>
+                            </div>
+                            <div class="entry-details">
+                                <div>Working on the web application for <a href="https://ieeexplore.ieee.org/abstract/document/11025687" target="_blank">SIRES</a> (Smart Integrated Renewable Energy Systems) project.</div>
+                                <p>Key works include:</p>
+                                • Refactored Django codebase in collaboration with the SIRES research team to support ongoing system upgrades, ensuring MTV architecture compliance while implementing real-time API integrations for more accurate data delivery. <br>
+                                • Improved computational efficiency by optimizing genetic algorithm usages, incorporating convergence-based termination for faster, more accurate results in optimization processes.
+                            </div>
+                        </div>
+                    </div>
                     <div class="entry-container">
-                    <div class="section-hint">Click entry for details</div>
                         <div class="entry-box">
                             <div class="entry-box-header">
                                 <div class="entry-box-content">
@@ -154,27 +178,6 @@
                                     </svg>
                                     <div>
                                         <div class="entry-header">
-                                            <div class="entry-title">Python-Django Developer</div>
-                                        </div>
-                                        <div class="entry-location">Department of Physics, Geology & Engineering Technology, NKU</div>
-                                    </div>
-                                </div>
-                                <div class="entry-date">Fall 2025 - Present</div>
-                            </div>
-                            <div class="entry-details">
-                                <div>Working on developing web application for Smart Integrated Renewable Energy Systems (SIRES) project.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="entry-container">
-                        <div class="entry-box">
-                            <div class="entry-box-header">
-                                <div class="entry-box-content">
-                                    <svg class="entry-toggle-icon" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M7 10l5 5 5-5z"/>
-                                    </svg>
-                                    <div>
-                                        <div class="entry-header">
                                             <div class="entry-title">Undergraduate Teaching Assistant</div>
                                         </div>
                                         <div class="entry-location">Northern Kentucky University</div>
@@ -187,8 +190,7 @@
                                 <div>Course Instructor: <a href="https://www.linkedin.com/in/junxiu-zhou-7b527a103/" target="_blank">Dr Junxiu Zhou</a></div>
                                 <div>Key responsibilities include:</div>
                                 • Hold office hours to provide one-on-one debugging support and conceptual guidance on DSA problems to students<br>
-                                • Grade assignments and projects with detailed feedback to strengthen student understanding<br>
-                                • Assist in course material development, online platform management and develop comprehensive test cases for Java programs<br>
+                                • Assist instructor in grading assignments, develop comprehensive test cases for Java programs and online platform management.<br>
                             </div>
                         </div>
                     </div>
@@ -218,7 +220,7 @@
 
                 <!-- Research Page -->
                 <div id="research" class="page-content">
-                    <h2 class="section-title">Research</h2>
+                    <h2 class="section-title">Publications</h2>
                     <div class="entry-container">
                         <div class="section-hint">Click entry for details</div>
                         <div class="entry-box">
@@ -228,8 +230,60 @@
                                         <path d="M7 10l5 5 5-5z"/>
                                     </svg>
                                     <div>
+                                        <div class="entry-title">Benchmarking LLMs for Content Expansion: Measuring Novelty in Iterative Course Outline Generation</div>
+                                        <div class="entry-subtitle">Ghimire V, Shrestha L.J., Dhungana B, Sadat N, Caporusso N (2025)</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="entry-details">
+                                <div class="research-tabs">
+                                    <button class="research-tab active" data-tab="abstract-3">Abstract</button>
+                                    <button class="research-tab" data-tab="paper-3">Paper</button>
+                                </div>
+                                <div class="research-content active" id="abstract-3">
+                                    <div class="research-abstract">
+                                        <p> <br>Iterative prompting is a technique commonly used to progressively
+                                            refine the output produced by Large Language Models (LLMs) to
+                                            obtain more comprehensive content. This method is particularly
+                                            useful in the context of education for drafting and refining lists
+                                            of topics to be included in course outlines, syllabi, and lecture
+                                            plans. However, one of the main challenges in iterative
+                                            prompting is determining whether, at each iteration, the model
+                                            outputs truly new material or merely rephrases existing content.
+                                            While iterative refinement is a common practice, it often
+                                            results in repetition, which requires educators to conduct
+                                            time-consuming manual checks, thereby limiting the benefits
+                                            provided by LLM-assisted course design. To mitigate this, we
+                                            introduce a framework that applies a novelty metric, integrating
+                                            both lexical and semantic similarity measures, to automatically
+                                            categorize generated outputs as novel, redundant, or requiring
+                                            human judgment. We tested this framework across seven widely
+                                            used LLMs (ChatGPT o3, Claude 4 Sonnet, Gemini 2.5 Pro,
+                                            DeepSeek R1, Grok 3, Qwen 2.5, and Llama 3.3) to create a Java
+                                            programming course outline over multiple iterations. Results
+                                            from conversations containing over 23,751 individual topics
+                                            showed that DeepSeek R1 produced the highest percentage of
+                                            novel content. Moreover, our method successfully automated
+                                            classification for 96.7% of the outputs, substantially reducing
+                                            the proportion of items that require manual review.</p>
+                                    </div>
+                                </div>
+                                <div class="research-content" id="paper-3">
+                                    <a href="#" target="_blank" class="research-paper-link">[Publishing soon...]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="entry-container">
+                        <div class="entry-box">
+                            <div class="entry-box-header">
+                                <div class="entry-box-content">
+                                    <svg class="entry-toggle-icon" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M7 10l5 5 5-5z"/>
+                                    </svg>
+                                    <div>
                                         <div class="entry-title">Evaluating Output Novelty in Iterative Prompting in Educational Content Generation</div>
-                                        <div class="entry-subtitle">Ghimire V, Dhungana B, Shrestha L.J., Sadat N, Caporusso N (2025)</div>
+                                        <div class="entry-subtitle">Ghimire V, Shrestha L.J., Dhungana B, Sadat N, Caporusso N (2025)</div>
                                     </div>
                                 </div>
                             </div>
@@ -277,7 +331,7 @@
                                     </div>
                                 </div>
                                 <div class="research-content" id="paper-2">
-                                    <a href="#" target="_blank" class="research-paper-link">[Coming Soon]</a>
+                                    <a href="https://www.researchgate.net/publication/396923717_Evaluating_Output_Novelty_in_Iterative_Prompting_in_Educational_Content_Generation" target="_blank" class="research-paper-link">[RESEARCH GATE]</a>
                                 </div>
                             </div>
                         </div>
@@ -337,7 +391,7 @@
                                     </div>
                                 </div>
                                 <div class="research-content" id="paper-1">
-                                    <a href="https://ieeexplore.ieee.org/document/11131839">[Link]</a>
+                                    <a href="https://ieeexplore.ieee.org/document/11131839">[IEEE Explore]</a>
                                 </div>
                             </div>
                         </div>
@@ -356,7 +410,7 @@
                                         <path d="M7 10l5 5 5-5z"/>
                                     </svg>
                                     <div>
-                                        <div class="entry-title">Mr-Tutor</div>
+                                        <div class="entry-title">Knowtify</div>
                                         <div class="entry-subtitle">A local-first application that transforms your study materials into interactive flashcards and quizzes using LLMs locally - no cloud, no tracking, just effective learning.</div>
                                     </div>                                
                                 </div>
