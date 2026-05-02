@@ -6,15 +6,15 @@
 }
 
 .counter-wrapper {
-    text-align: right;
-    margin-top: 15px;
-    max-width: 75%;
+    text-align: center;
+    margin-top: 2px;
+    max-width: 300px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .counter-wrapper * {
-    text-align: right !important;
+    text-align: center !important;
     margin: 0 !important;
     display: inline !important;
 }
@@ -25,7 +25,7 @@ script + div,
 body > div:last-child,
 .counter-wrapper > div,
 .counter-wrapper div {
-    text-align: right !important;
+    text-align: center !important;
     margin: 0 !important;
     padding: 0 !important;
     display: inline !important;
@@ -43,7 +43,7 @@ div[id*="wso"] *,
     font-size: 22px !important;
     color: #555555 !important;
     font-weight: 400 !important;
-    text-align: right !important;
+    text-align: center !important;
     line-height: 1.7 !important;
     margin: 0 !important;
     padding: 0 !important;
