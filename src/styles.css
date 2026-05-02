@@ -231,6 +231,12 @@ body {
     text-align: justify;
 }
 
+.about-key {
+    font-weight: 520;
+    color: #111827;
+    letter-spacing: 0.005em;
+}
+
 /* Page Content */
 .page-content {
     display: none;
