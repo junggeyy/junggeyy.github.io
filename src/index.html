@@ -19,17 +19,31 @@
 <body>
     <div class="container">
         <nav class="navbar">
-            <div class="nav-links">
-                <a href="#home" class="nav-link home-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            <div class="nav-routing">
+                <div class="nav-links">
+                    <a href="#home" class="nav-link home-link" data-section="home">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                        </svg>
+                    </a>
+                    <a href="#research" class="nav-link" data-section="research">Research</a>
+                    <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+                    <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                    <a href="#education" class="nav-link" data-section="education">Education</a>
+                    <a href="#cv" class="nav-link" data-section="cv">CV</a>
+                </div>
+                <div class="nav-gps-layer" aria-hidden="true">
+                    <svg class="nav-gps-svg" preserveAspectRatio="none">
+                        <path class="gps-route-bg"></path>
+                        <path class="gps-route-trail"></path>
+                        <g class="gps-marker">
+                            <circle class="gps-marker-pulse" r="9"></circle>
+                            <circle class="gps-marker-halo" r="7"></circle>
+                            <circle class="gps-marker-ring" r="5.5"></circle>
+                            <path class="gps-marker-beam" d="M0 -3.6 L3 2.8 L0 1 L-3 2.8 Z"></path>
+                        </g>
                     </svg>
-                </a>
-                <a href="#research" class="nav-link">Research</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#education" class="nav-link">Education</a>
-                <a href="#cv" class="nav-link">CV</a>
+                </div>
             </div>
         </nav>
 
@@ -599,6 +613,7 @@
         </main>
     </div>
 
+    <script src="gps-track.js"></script>
     <script src="script.js"></script>
 </body>
 </html> 

@@ -14,6 +14,10 @@ document.addEventListener('DOMContentLoaded', function() {
         if (targetPage) {
             targetPage.classList.add('active');
         }
+
+        if (window.NavGpsTrack) {
+            window.NavGpsTrack.navigateTo(pageId);
+        }
     }
     
     // Function to update active navigation link

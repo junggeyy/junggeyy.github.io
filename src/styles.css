@@ -46,7 +46,7 @@ body {
 
 /* Navigation Bar */
 .navbar {
-    padding: 22px 0;
+    padding: 22px 0 4px;
     display: flex;
     justify-content: flex-end;
     border-bottom: 1px solid #e5e7eb;
@@ -57,10 +57,108 @@ body {
     backdrop-filter: blur(6px);
 }
 
+.nav-routing {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+    width: 100%;
+    max-width: fit-content;
+    margin-left: auto;
+}
+
 .nav-links {
     display: flex;
     gap: 28px;
     align-items: center;
+}
+
+/* GPS route track under nav */
+.nav-gps-layer {
+    width: 100%;
+    height: 28px;
+    position: relative;
+    pointer-events: none;
+    margin-top: -2px;
+}
+
+.nav-gps-svg {
+    display: block;
+    width: 100%;
+    height: 26px;
+    overflow: visible;
+}
+
+.gps-route-bg {
+    fill: none;
+    stroke: #e2e8f0;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 4 6;
+}
+
+.gps-route-trail {
+    fill: none;
+    stroke: #0d9488;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    opacity: 0.85;
+    transition: stroke-dasharray 0.05s linear;
+}
+
+.gps-marker {
+    transform-origin: center;
+    transform-box: fill-box;
+    filter: drop-shadow(0 1px 1.5px rgba(15, 23, 42, 0.14));
+}
+
+.gps-marker-pulse {
+    fill: rgba(13, 148, 136, 0.12);
+    stroke: rgba(13, 148, 136, 0.25);
+    stroke-width: 1;
+    opacity: 0;
+}
+
+.gps-marker-halo {
+    fill: rgba(13, 148, 136, 0.18);
+    stroke: none;
+}
+
+.gps-marker-ring {
+    fill: #ffffff;
+    stroke: #0d9488;
+    stroke-width: 1.25;
+}
+
+.gps-marker-beam {
+    fill: #0d9488;
+}
+
+.gps-marker.gps-marker--arrived .gps-marker-pulse {
+    animation: gps-pulse 1.2s ease-out 1;
+}
+
+@keyframes gps-pulse {
+    0% {
+        opacity: 0.65;
+        r: 6;
+    }
+    100% {
+        opacity: 0;
+        r: 11;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gps-route-trail {
+        transition: none;
+    }
+
+    .gps-marker.gps-marker--arrived .gps-marker-pulse {
+        animation: none;
+    }
 }
 
 .home-link {
@@ -84,17 +182,8 @@ body {
 }
 
 .nav-link.active {
-    color: #333333;
-}
-
-.nav-link.active::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 100%;
-    height: 1.5px;
-    background-color: #111827;
+    color: #111827;
+    font-weight: 600;
 }
 
 /* Main Content Area */
@@ -660,10 +749,19 @@ body {
         text-align: center;
     }
     
+    .nav-routing {
+        align-items: center;
+        max-width: 100%;
+    }
+
     .nav-links {
         gap: 20px;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .nav-gps-layer {
+        display: none;
     }
     
     .container {
