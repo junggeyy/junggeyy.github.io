@@ -123,3 +123,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
 }); 
+
+function toggleGroup(id) {
+    const group = document.getElementById(id);
+    if (group) {
+        group.classList.toggle('open');
+    }
+}

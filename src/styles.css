@@ -806,3 +806,46 @@ body {
         padding: 18px;
     }
 } 
+
+.project-group {
+    margin-bottom: 16px;
+}
+
+.project-group-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 6px 0 14px 0;
+    user-select: none;
+}
+
+.group-toggle-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    color: #111827;
+    transition: transform 0.2s ease;
+    transform: rotate(-90deg);
+}
+
+.project-group.open > .project-group-header .group-toggle-icon {
+    transform: rotate(0deg);
+}
+
+.group-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
+
+.group-content {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.project-group.open > .group-content {
+    display: flex;
+}
