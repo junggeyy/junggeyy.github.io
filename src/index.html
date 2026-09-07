@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vickey Ghimire - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260907-2">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXQHH6YSY9"></script>
@@ -78,6 +78,26 @@
                 <div class="counter-wrapper">
                     <script type="text/javascript" src="https://counter.websiteout.com/js/36/5/0/0"></script>
                 </div>
+                <ul class="profile-status" aria-label="Current profile details">
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 3 2 8l10 5 8-4v6h2V8L12 3Zm-6 8.1V16c0 2.2 2.7 4 6 4s6-1.8 6-4v-4.9l-6 3-6-3Z"/>
+                        </svg>
+                        <a href="https://www.utdallas.edu/" target="_blank" rel="noopener noreferrer">The University of Texas at Dallas</a>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M9 4h6a2 2 0 0 1 2 2v2h3a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h3V6a2 2 0 0 1 2-2Zm6 4V6H9v2h6Zm-3 6c3.3 0 6.1-.7 8-1.8V10H4v2.2c1.9 1.1 4.7 1.8 8 1.8Zm-1 0h2v2h-2v-2Z"/>
+                        </svg>
+                        <a href="https://hpc.utdallas.edu/" target="_blank" rel="noopener noreferrer">HPC Student Assistant @ UTD</a>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 2a7 7 0 0 1 7 7c0 5.2-7 13-7 13S5 14.2 5 9a7 7 0 0 1 7-7Zm0 4.5A2.5 2.5 0 1 0 12 11a2.5 2.5 0 0 0 0-5Z"/>
+                        </svg>
+                        <span>Dallas–Fort Worth Metroplex</span>
+                    </li>
+                </ul>
             </div>
 
             <!-- Right Section - Content Pages -->
@@ -133,7 +153,10 @@
                                 <div class="entry-date">August 2026 - May 2028</div>
                             </div>
                             <div class="entry-details">
-                                <div>Honors: John Forrest Kain Scholarship</div>
+                                <div class="entry-fact">
+                                    <span class="entry-fact-label">Honors</span>
+                                    <span>John Forrest Kain Scholarship</span>
+                                </div>
                             </div>
                         </div>
                         <div class="entry-box">
@@ -152,9 +175,18 @@
                                 <div class="entry-date">August 2022 - May 2026</div>
                             </div>
                             <div class="entry-details">
-                                <div>Minors: Mathematics and Information Technology</div>
-                                <div>GPA: 3.94</div>
-                                <div>Honors: Summa Cum Laude, EDGE AWARD, President's Honors List</div>
+                                <div class="entry-fact">
+                                    <span class="entry-fact-label">Minors</span>
+                                    <span>Mathematics and Information Technology</span>
+                                </div>
+                                <div class="entry-fact">
+                                    <span class="entry-fact-label">GPA</span>
+                                    <span>3.94</span>
+                                </div>
+                                <div class="entry-fact">
+                                    <span class="entry-fact-label">Honors</span>
+                                    <span>Summa Cum Laude, EDGE AWARD, President's Honors List</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -181,10 +213,12 @@
                                 <div class="entry-date">Fall 2026 - Present</div>
                             </div>
                             <div class="entry-details">
-                                <p>Responsibilites include:</p>
-                                • Provide technical support to researchers and students using HPC systems. <br>
-                                • Troubleshoot Linux/UNIX environments, software compilation/installations, and scientific computing workflows in coordination with HPC staff. <br>
-                                • Monitor HPC systems and usage data, assisting with system reporting, data visualization, and contributing to technical workshops & research-computing training activities.
+                                <p class="entry-details-heading">Key responsibilities</p>
+                                <ul class="entry-details-list">
+                                    <li>Provide technical support to researchers and students using HPC systems.</li>
+                                    <li>Troubleshoot Linux/UNIX environments, software compilation and installations, and scientific-computing workflows in coordination with HPC staff.</li>
+                                    <li>Monitor HPC systems and usage data, assist with reporting and visualization, and contribute to technical workshops and research-computing training.</li>
+                                </ul>
                             </div>
                         </div>
                         <div class="entry-box">
@@ -203,12 +237,14 @@
                                 <div class="entry-date">Fall 2025 - Spring 2026</div>
                             </div>
                             <div class="entry-details">
-                                <div>Worked on the web application for <a href="https://ieeexplore.ieee.org/abstract/document/11025687" target="_blank">SIRES</a> (Smart Integrated Renewable Energy Systems) project.</div>
-                                <p>Key contributions include:</p>
-                                • Engineered a modular, class-based Django architecture refactoring a legacy tool into an MTV-compliant multi-user web platform with secure authentication and SQLite-based data persistence <br>
-                                • Built dynamic data pipelines integrating NASA POWER and OpenStreetMap APIs, replacing static spreadsheet extraction with location-specific environmental inputs. <br>
-                                • Optimized energy system (NGA-III) computation efficiency by ~35% through convergence-based termination and in-session result caching. <br>
-                                • Upgraded the frontend with Chart.js visualizations and refined UI typography, delivering interactive analytics on optimization results. <br>
+                                <p class="entry-details-summary">Developed the web application for <a href="https://ieeexplore.ieee.org/abstract/document/11025687" target="_blank">SIRES</a> (Smart Integrated Renewable Energy Systems).</p>
+                                <p class="entry-details-heading">Key contributions</p>
+                                <ul class="entry-details-list">
+                                    <li>Engineered a modular, class-based Django architecture, refactoring a legacy tool into an MTV-compliant multi-user platform with secure authentication and SQLite persistence.</li>
+                                    <li>Built dynamic data pipelines integrating NASA POWER and OpenStreetMap APIs, replacing static spreadsheet extraction with location-specific environmental inputs.</li>
+                                    <li>Improved NGA-III energy-system computation efficiency by approximately 35% through convergence-based termination and in-session result caching.</li>
+                                    <li>Added Chart.js visualizations and refined the interface typography to deliver clearer, interactive optimization analytics.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -229,12 +265,14 @@
                                 <div class="entry-date">Fall 2024 - Summer 2026</div>
                             </div>
                             <div class="entry-details">
-                                <div>As a research assistant at NKU's Human-Computer Interaction Lab, I primarily worked on projects around language model behavior and natural language processing.</div>
-                                <div> Advisors: <a href="https://www.linkedin.com/in/nazmus-sadat/" target="_blank">Dr. Nazmus Sadat</a> and <a href="https://www.linkedin.com/in/nicholascaporusso/" target="_blank">Dr. Nicholas Caporusso</a></div>
-                                <div>Key contributions include:</div>
-                                • Architected a novelty-detection framework using lexical (Jaccard) and semantic (BERT-based) measures to auto-classify LLM outputs, reducing manual review burden from 32.8% to 3.1% across 31,000+ generated topics.<br>
-                                • Led survey-based analysis of ChatGPT's memory feature across 135+ users and 55+ accounts, uncovering critical gaps in user awareness and data privacy practices. <br>
-                                • Co-authored 3 peer-reviewed papers (2 as first author), leading data analytics workflows from preprocessing and statistical modeling to data viz production. <br>
+                                <p class="entry-details-summary">Conducted research on language-model behavior and natural language processing in NKU's Human-Computer Interaction Lab.</p>
+                                <p class="entry-details-meta">Advisors: <a href="https://www.linkedin.com/in/nazmus-sadat/" target="_blank">Dr. Nazmus Sadat</a> and <a href="https://www.linkedin.com/in/nicholascaporusso/" target="_blank">Dr. Nicholas Caporusso</a></p>
+                                <p class="entry-details-heading">Key contributions</p>
+                                <ul class="entry-details-list">
+                                    <li>Architected a novelty-detection framework using lexical (Jaccard) and semantic (BERT-based) measures to classify LLM outputs, reducing manual review from 32.8% to 3.1% across more than 31,000 generated topics.</li>
+                                    <li>Led a survey-based analysis of ChatGPT's memory feature across more than 135 users and 55 accounts, identifying gaps in user awareness and data-privacy practices.</li>
+                                    <li>Co-authored three peer-reviewed papers—two as first author—and led analytics workflows from preprocessing and statistical modeling through final data visualizations.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -255,11 +293,13 @@
                                 <div class="entry-date">Fall 2025</div>
                             </div>
                             <div class="entry-details">
-                                <div>As a Teaching Assistant for <i>CSC 364: Data Structures and Algorithms in Java</i>, I helped facilitate the course by supporting student learning and assisting the instructor as needed.</div>
-                                <div>Course Instructor: <a href="https://www.linkedin.com/in/junxiu-zhou-7b527a103/" target="_blank">Dr. Junxiu Zhou</a></div>
-                                <div>Key responsibilities:</div>
-                                • Held weekly office hours mentoring 40+ students on DSA concepts, debugging, and Java problem-solving. <br>
-                                • Collaborated with instructor to develop Java test cases, design assessment rubrics, and streamline grading workflows. <br>
+                                <p class="entry-details-summary">Supported student learning in <i>CSC 364: Data Structures and Algorithms in Java</i>.</p>
+                                <p class="entry-details-meta">Course instructor: <a href="https://www.linkedin.com/in/junxiu-zhou-7b527a103/" target="_blank">Dr. Junxiu Zhou</a></p>
+                                <p class="entry-details-heading">Key responsibilities</p>
+                                <ul class="entry-details-list">
+                                    <li>Held weekly office hours, mentoring more than 40 students on data structures, algorithms, debugging, and Java problem-solving.</li>
+                                    <li>Collaborated with the instructor to develop Java test cases, design assessment rubrics, and streamline grading workflows.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -280,8 +320,8 @@
                                 <div class="entry-date">Fall 2025 - Spring 2026</div>
                             </div>
                             <div class="entry-details">
-                                <div>As a Business Services Supervisor <i>(Student Employment)</i> at Kentucky's largest recreation center, I oversaw membership services operations, supervised student employees, managed sales and membership reports, supported special events and more.</div>
-                                <div>Before transitioning to this role, I also worked as a Facilities Manager <i>(Spring 2023 - Fall 2025)</i> within the same organization where I supervised daily operations, ensured facility safety and efficiency, trained and led student-staff, fostering leadership development and resolving operational challenges.</div>
+                                <p class="entry-details-summary">As a Business Services Supervisor <i>(Student Employment)</i> at Kentucky's largest recreation center, I oversaw membership operations, supervised student employees, managed sales and membership reports, and supported special events.</p>
+                                <p class="entry-details-summary entry-details-summary--secondary">Previously, as Facilities Manager <i>(Spring 2023 - Fall 2025)</i>, I supervised daily operations, supported facility safety and efficiency, trained student staff, and resolved operational challenges.</p>
                             </div>
                         </div>
                     </div>
@@ -311,7 +351,7 @@
                                 </div>
                                 <div class="research-content active" id="abstract-3">
                                     <div class="research-abstract">
-                                        <p> <br>Iterative prompting is a technique commonly used to progressively
+                                        <p>Iterative prompting is a technique commonly used to progressively
                                             refine the output produced by Large Language Models (LLMs) to
                                             obtain more comprehensive content. This method is particularly
                                             useful in the context of education for drafting and refining lists
@@ -338,7 +378,7 @@
                                     </div>
                                 </div>
                                 <div class="research-content" id="paper-3">
-                                    <a href="https://www.researchgate.net/publication/397504945_Benchmarking_LLMs_for_Content_Expansion_Measuring_Novelty_in_Iterative_Course_Outline_Generation" target="_blank" class="research-paper-link">[RESEARCH GATE]</a>
+                                    <a href="https://www.researchgate.net/publication/397504945_Benchmarking_LLMs_for_Content_Expansion_Measuring_Novelty_in_Iterative_Course_Outline_Generation" target="_blank" class="research-paper-link">ResearchGate ↗</a>
                                 </div>
                             </div>
                         </div>
@@ -364,7 +404,7 @@
                                 </div>
                                 <div class="research-content active" id="abstract-2">
                                     <div class="research-abstract">
-                                        <p> <br>Large Language Models (LLMs) have been explored
+                                        <p>Large Language Models (LLMs) have been explored
                                             as a valuable tool for creating course outlines. To this end, 
                                             iterative prompting can be utilized to correct and expand the output.
                                             However, iterative prompting often results in LLMs producing
@@ -400,7 +440,7 @@
                                     </div>
                                 </div>
                                 <div class="research-content" id="paper-2">
-                                    <a href="https://www.researchgate.net/publication/396923717_Evaluating_Output_Novelty_in_Iterative_Prompting_in_Educational_Content_Generation" target="_blank" class="research-paper-link">[RESEARCH GATE]</a>
+                                    <a href="https://www.researchgate.net/publication/396923717_Evaluating_Output_Novelty_in_Iterative_Prompting_in_Educational_Content_Generation" target="_blank" class="research-paper-link">ResearchGate ↗</a>
                                 </div>
                             </div>
                         </div>
@@ -426,7 +466,7 @@
                                 </div>
                                 <div class="research-content active" id="abstract-1">
                                     <div class="research-abstract">
-                                        <p><br>OpenAI’s new “memory" feature enables ChatGPT to provide more personalized and relevant interactions
+                                        <p>OpenAI’s new “memory" feature enables ChatGPT to provide more personalized and relevant interactions
                                             by storing user information from the prompts and using
                                             it across conversations. While offering improved responses,
                                             the memory feature poses privacy and security challenges.
@@ -460,7 +500,7 @@
                                     </div>
                                 </div>
                                 <div class="research-content" id="paper-1">
-                                    <a href="https://ieeexplore.ieee.org/document/11131839">[IEEE Explore]</a>
+                                    <a href="https://ieeexplore.ieee.org/document/11131839" target="_blank" class="research-paper-link">IEEE Xplore ↗</a>
                                 </div>
                             </div>
                         </div>
@@ -495,10 +535,10 @@
                                         <div class="entry-date">July 2026</div>
                                     </div>
                                     <div class="entry-details">
-                                        <div><strong>Tech stack:</strong> GeoPandas, rasterio, xarray, rioxarray</div>
+                                        <div class="project-tech-stack"><strong>Tech stack</strong><span>GeoPandas, rasterio, xarray, rioxarray</span></div>
                                         <div class="project-links">
-                                            <a href="https://github.com/junggeyy/gis-notebooks/blob/main/notebooks/site_suitability_analysis.ipynb" target="_blank" class="project-link">[GitHub]</a>
-                                            <a href="https://colab.research.google.com/github/junggeyy/gis-notebooks/blob/main/notebooks/site_suitability_analysis.ipynb" target="_blank" class="project-link">[Google Colab]</a>
+                                            <a href="https://github.com/junggeyy/gis-notebooks/blob/main/notebooks/site_suitability_analysis.ipynb" target="_blank" class="project-link">GitHub ↗</a>
+                                            <a href="https://colab.research.google.com/github/junggeyy/gis-notebooks/blob/main/notebooks/site_suitability_analysis.ipynb" target="_blank" class="project-link">Google Colab ↗</a>
                                         </div>
                                     </div>
                                 </div> 
@@ -516,9 +556,9 @@
                                         <div class="entry-date">April 2026</div>
                                     </div>
                                     <div class="entry-details">
-                                        <div><strong>Tech stack:</strong> GeoPandas, Shapely, Raster & DEM Analysis, OpenStreetMap, React-Leaflet</div>
+                                        <div class="project-tech-stack"><strong>Tech stack</strong><span>GeoPandas, Shapely, Raster &amp; DEM Analysis, OpenStreetMap, React-Leaflet</span></div>
                                         <div class="project-links">
-                                            <a href="https://github.com/junggeyy/road-risk-viewer" target="_blank" class="project-link">[GitHub]</a>
+                                            <a href="https://github.com/junggeyy/road-risk-viewer" target="_blank" class="project-link">GitHub ↗</a>
                                         </div>
                                     </div>
                                 </div>
@@ -547,9 +587,9 @@
                                         <div class="entry-date">November 2025</div>
                                     </div>
                                     <div class="entry-details">
-                                        <div><strong>Tech stack:</strong> Random Forest models, Pandas, FastAPI, Replit, Numpy, MCP Servers</div>
+                                        <div class="project-tech-stack"><strong>Tech stack</strong><span>Random Forest models, Pandas, FastAPI, Replit, NumPy, MCP Servers</span></div>
                                         <div class="project-links">
-                                            <a href="https://github.com/junggeyy/predictive-maintenance" target="_blank" class="project-link">[GitHub]</a>
+                                            <a href="https://github.com/junggeyy/predictive-maintenance" target="_blank" class="project-link">GitHub ↗</a>
                                         </div>
                                     </div>
                                 </div>                        
@@ -567,9 +607,9 @@
                                         <div class="entry-date">August 2025</div>
                                     </div>
                                     <div class="entry-details">
-                                        <div><strong>Tech stack:</strong> FastAPI, Ollama, LangChain, SQLAlchemy, DBsqlite</div>
+                                        <div class="project-tech-stack"><strong>Tech stack</strong><span>FastAPI, Ollama, LangChain, SQLAlchemy, SQLite</span></div>
                                         <div class="project-links">
-                                            <a href="https://github.com/junggeyy/knowtify" target="_blank" class="project-link">[GitHub]</a>
+                                            <a href="https://github.com/junggeyy/knowtify" target="_blank" class="project-link">GitHub ↗</a>
                                         </div>
                                     </div>
                                 </div>
@@ -587,9 +627,9 @@
                                         <div class="entry-date">July 2025</div>
                                     </div>
                                     <div class="entry-details">
-                                        <div><strong>Tech stack:</strong> FastAPI, LangChain, Firebase, Firestore, Google Gen-AI</div>
+                                        <div class="project-tech-stack"><strong>Tech stack</strong><span>FastAPI, LangChain, Firebase, Firestore, Google Gen AI</span></div>
                                         <div class="project-links">
-                                            <a href="https://github.com/junggeyy/route-rishi" target="_blank" class="project-link">[GitHub]</a>
+                                            <a href="https://github.com/junggeyy/route-rishi" target="_blank" class="project-link">GitHub ↗</a>
                                         </div>
                                     </div>
                                 </div>
@@ -607,9 +647,9 @@
                                         <div class="entry-date">May 2025</div>
                                     </div>
                                     <div class="entry-details">
-                                        <div><strong>Tech stack:</strong> Django, Websocket, Kotlin,SQLite, Facebook Prophet</div>
+                                        <div class="project-tech-stack"><strong>Tech stack</strong><span>Django, WebSocket, Kotlin, SQLite, Facebook Prophet</span></div>
                                         <div class="project-links">
-                                            <a href="https://github.com/junggeyy/stock-insights-android" target="_blank" class="project-link">[GitHub]</a>
+                                            <a href="https://github.com/junggeyy/stock-insights-android" target="_blank" class="project-link">GitHub ↗</a>
                                         </div>
                                     </div>
                                 </div>
@@ -623,35 +663,6 @@
                     <h2 class="section-title">CV</h2>
                     <div class="entry-container">
                         <div class="section-hint">Click entry for details</div>
-                        <div class="entry-box">
-                            <div class="entry-box-header">
-                                <div class="entry-box-content">
-                                    <svg class="entry-toggle-icon" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M7 10l5 5 5-5z"/>
-                                    </svg>
-                                    <div>
-                                        <div class="entry-title">Curriculum Vitae</div>
-                                        <div class="entry-location">View or download my CV</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="entry-details">
-                                <div class="research-poster">
-                                    <a href="img/CV.pdf" target="_blank" class="pdf-preview">
-                                        <img src="img/cv_thumbnail.png" alt="CV Thumbnail" class="poster-thumbnail">
-                                        <div class="overlay">
-                                            <svg class="pdf-icon" viewBox="0 0 24 24" fill="currentColor">
-                                                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
-                                            </svg>
-                                            <div class="pdf-text">View CV</div>
-                                            <div class="pdf-subtext">Click to open in new tab</div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="entry-container">
                         <div class="entry-box">
                             <div class="entry-box-header">
                                 <div class="entry-box-content">
@@ -673,6 +684,35 @@
                                                 <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
                                             </svg>
                                             <div class="pdf-text">View Resume</div>
+                                            <div class="pdf-subtext">Click to open in new tab</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="entry-container">
+                        <div class="entry-box">
+                            <div class="entry-box-header">
+                                <div class="entry-box-content">
+                                    <svg class="entry-toggle-icon" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M7 10l5 5 5-5z"/>
+                                    </svg>
+                                    <div>
+                                        <div class="entry-title">Curriculum Vitae</div>
+                                        <div class="entry-location">View or download my CV</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="entry-details">
+                                <div class="research-poster">
+                                    <a href="img/CV.pdf" target="_blank" class="pdf-preview">
+                                        <img src="img/cv_thumbnail.png" alt="CV Thumbnail" class="poster-thumbnail">
+                                        <div class="overlay">
+                                            <svg class="pdf-icon" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                                            </svg>
+                                            <div class="pdf-text">View CV</div>
                                             <div class="pdf-subtext">Click to open in new tab</div>
                                         </div>
                                     </a>

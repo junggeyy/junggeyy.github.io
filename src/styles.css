@@ -7,7 +7,7 @@
 
 .counter-wrapper {
     text-align: center;
-    margin-top: 8px;
+    margin-top: -8px;
     max-width: 300px;
     margin-left: auto;
     margin-right: auto;
@@ -47,8 +47,9 @@ body {
 /* Navigation Bar */
 .navbar {
     padding: 22px 0 4px;
-    display: flex;
-    justify-content: flex-end;
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    column-gap: 64px;
     border-bottom: 1px solid #e5e7eb;
     position: sticky;
     top: 0;
@@ -60,17 +61,18 @@ body {
 .nav-routing {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: stretch;
     gap: 2px;
-    width: 100%;
-    max-width: fit-content;
-    margin-left: auto;
+    grid-column: 2;
+    width: min(100%, 640px);
+    margin-right: auto;
 }
 
 .nav-links {
     display: flex;
     gap: 28px;
     align-items: center;
+    justify-content: center;
 }
 
 /* GPS route track under nav */
@@ -202,7 +204,7 @@ body {
     gap: 24px;
     position: sticky;
     top: 110px;
-    padding-top: 60px;
+    padding-top: 20px;
 }
 
 /* Profile Picture */
@@ -259,6 +261,50 @@ body {
 .social-icon:active {
     transform: translateY(0);
     background-color: #e8e8e8;
+}
+
+.profile-status {
+    display: grid;
+    gap: 9px;
+    width: max-content;
+    max-width: 300px;
+    margin: -8px auto 0;
+    padding: 2px 0 0;
+    align-self: center;
+    color: #4b5563;
+    font-size: 14px;
+    line-height: 1.35;
+    list-style: none;
+}
+
+.profile-status li {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+}
+
+.profile-status a:link,
+.profile-status a:visited {
+    color: #4b5563;
+    text-decoration: underline;
+    text-decoration-color: #cbd5e1;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.profile-status a:hover,
+.profile-status a:focus-visible {
+    color: #0f766e;
+    text-decoration-color: #5eead4;
+}
+
+.profile-status svg {
+    width: 16px;
+    height: 16px;
+    margin-top: 1px;
+    flex: 0 0 auto;
+    fill: #64748b;
 }
 
 /* Right Section */
@@ -363,6 +409,7 @@ body {
 }
 
 .entry-container {
+    width: min(72ch, calc(100vw - 412px));
     max-width: 72ch;
     margin: 0 auto;
 }
@@ -460,7 +507,7 @@ body {
     overflow: hidden;
     transition: max-height 0.3s ease, padding 0.3s ease;
     padding-top: 0;
-    text-align: justify;
+    text-align: left;
 }
 
 .entry-box.expanded .entry-details {
@@ -468,6 +515,78 @@ body {
     padding-top: 18px;
     margin-top: 12px;
     border-top: 1px solid #edf2f7;
+}
+
+#experience .entry-details {
+    text-align: left;
+}
+
+#education .entry-details {
+    display: grid;
+    gap: 9px;
+}
+
+.entry-fact {
+    display: grid;
+    grid-template-columns: 74px minmax(0, 1fr);
+    gap: 12px;
+    align-items: baseline;
+    margin: 0;
+}
+
+.entry-fact-label {
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+}
+
+.entry-details-summary {
+    margin: 0;
+    color: #475569;
+}
+
+.entry-details-summary--secondary {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.entry-details-meta {
+    margin-top: 7px;
+    color: #64748b;
+}
+
+.entry-details-heading {
+    margin: 16px 0 8px;
+    color: #334155;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.035em;
+    text-transform: uppercase;
+}
+
+.entry-details-list {
+    display: grid;
+    gap: 9px;
+    margin: 0;
+    padding-left: 19px;
+}
+
+.entry-details-list li {
+    padding-left: 3px;
+}
+
+.entry-details-list li::marker {
+    color: #0d9488;
+}
+
+#experience .entry-details a {
+    color: #1e3a8a;
+    font-weight: 500;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
 }
 
 /* Research Section Specific Styles */
@@ -536,7 +655,7 @@ body {
     font-size: 14px;
     line-height: 1.75;
     color: #4b5563;
-    text-align: justify;
+    text-align: left;
 }
 
 .research-poster {
@@ -647,14 +766,22 @@ body {
 }
 
 .research-paper-link {
-    color: #1e3a8a;
-    text-decoration: underline;
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 11px;
+    color: #334155;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 7px;
+    text-decoration: none;
     font-size: 14px;
+    font-weight: 600;
     transition: color 0.2s ease;
 }
 
 .research-paper-link:hover {
-    color: #1e40af;
+    color: #0f766e;
+    border-color: #99f6e4;
 }
 
 .entry-header {
@@ -723,26 +850,57 @@ body {
 }
 
 .project-links {
-    margin-top: 12px;
+    margin-top: 13px;
     display: flex;
-    gap: 16px;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.project-tech-stack {
+    display: grid;
+    gap: 4px;
+    padding: 11px 13px;
+    color: #475569;
+    background: #f8fafc;
+    border: 1px solid #eef2f7;
+    border-radius: 8px;
+}
+
+.project-tech-stack strong {
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
 }
 
 .project-link {
-    color: #1e3a8a;
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    color: #334155;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 7px;
     text-decoration: none;
     font-size: 14px;
-    font-weight: 500;
-    transition: color 0.2s ease;
+    font-weight: 600;
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .project-link:hover {
-    color: #1e40af;
-    text-decoration: underline;
+    color: #0f766e;
+    background: #f0fdfa;
+    border-color: #99f6e4;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: center;
+    }
+
     #content-area {
         flex-direction: column;
         gap: 40px;
@@ -763,10 +921,16 @@ body {
     .skills {
         text-align: center;
     }
+
+    .about-section {
+        left: 0;
+    }
     
     .nav-routing {
         align-items: center;
+        width: 100%;
         max-width: 100%;
+        margin: 0;
     }
 
     .nav-links {
@@ -784,6 +948,12 @@ body {
     }
     
     .entry-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .page-content {
+        width: 100%;
         max-width: 100%;
     }
     
@@ -815,6 +985,16 @@ body {
     
     .nav-link {
         font-size: 14px;
+    }
+
+    .entry-date {
+        flex-shrink: 1;
+        max-width: calc(100% - 44px);
+        white-space: normal;
+    }
+
+    .entry-box-content {
+        min-width: 0;
     }
 
     .entry-box {
