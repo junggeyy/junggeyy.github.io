@@ -287,22 +287,37 @@ body {
 }
 
 .about-section {
-    max-width: 68ch;
+    max-width: 62ch;
     margin: 0 auto;
+    position: relative;
+    left: 30px;
 }
 
 .about-text {
-    font-size: 15.5px;
-    color: #4b5563;
-    line-height: 1.85;
+    font-size: 16px;
+    color: #374151;
+    line-height: 1.68;
     font-weight: 400;
-    text-align: justify;
+    text-align: left;
+    margin: 0 0 0.8rem;
+}
+
+.about-greeting {
+    font-size: 15.5px;
+    color: #374151;
+    line-height: 1.68;
+    margin: 0 0 0.45rem;
+}
+
+.about-signoff {
+    font-size: 15.5px;
+    color: #374151;
+    margin-top: 1.2rem;
 }
 
 .about-key {
-    font-weight: 520;
+    font-weight: 600;
     color: #111827;
-    letter-spacing: 0.005em;
 }
 
 /* Page Content */
