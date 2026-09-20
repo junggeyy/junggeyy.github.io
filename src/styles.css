@@ -73,6 +73,7 @@ body {
     gap: 28px;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 /* GPS route track under nav */
@@ -186,6 +187,12 @@ body {
 .nav-link.active {
     color: #111827;
     font-weight: 600;
+}
+
+.nav-link-external {
+    position: absolute;
+    right: 0;
+    font-size: 16px;
 }
 
 /* Main Content Area */
@@ -340,7 +347,7 @@ body {
 }
 
 .about-text {
-    font-size: 16px;
+    font-size: 15.5px;
     color: #374151;
     line-height: 1.68;
     font-weight: 400;
@@ -937,6 +944,10 @@ body {
         gap: 20px;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .nav-link-external {
+        position: static;
     }
 
     .nav-gps-layer {

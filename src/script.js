@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navLinks = document.querySelectorAll('.nav-link[data-section]');
     const pageContents = document.querySelectorAll('.page-content');
     
     // Function to show a specific page
