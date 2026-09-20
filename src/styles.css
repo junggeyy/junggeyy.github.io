@@ -192,7 +192,16 @@ body {
 .nav-link-external {
     position: absolute;
     right: 0;
+    color: #374151;
+    text-decoration: none;
+    font-weight: 500;
     font-size: 16px;
+    letter-spacing: 0.01em;
+    transition: color 0.2s ease;
+}
+
+.nav-link-external:hover {
+    color: #111827;
 }
 
 /* Main Content Area */
@@ -994,7 +1003,8 @@ body {
         gap: 20px;
     }
     
-    .nav-link {
+    .nav-link,
+    .nav-link-external {
         font-size: 14px;
     }
 
