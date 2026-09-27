@@ -73,9 +73,9 @@ a { color: inherit; }
 .writing-index { margin-top: clamp(68px, 10vh, 104px); }
 
 .index-heading {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: baseline;
-    justify-content: space-between;
     padding-bottom: 12px;
     border-bottom: 1px solid var(--ink);
 }
@@ -86,12 +86,24 @@ a { color: inherit; }
     font-weight: 500;
 }
 
-.index-heading span {
-    color: var(--faint);
+.notification-toggle {
+    padding: 0;
+    border: 0;
+    color: #737f78;
+    background: transparent;
     font-family: var(--sans);
     font-size: 11px;
+    font-weight: 400;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+    cursor: pointer;
+    transition: color 180ms ease;
+}
+
+.notification-toggle:hover,
+.notification-toggle:focus-visible,
+.notification-toggle[aria-expanded="true"] {
+    color: var(--accent-dark);
 }
 
 .article-list {
@@ -139,6 +151,24 @@ a { color: inherit; }
     font-family: var(--sans);
     font-size: 12px;
     white-space: nowrap;
+}
+
+.notification-signup-content {
+    width: min(430px, 100%);
+    margin: 28px auto 0;
+    text-align: center;
+}
+
+.notification-signup-content h3 {
+    margin: 0 0 14px;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+}
+
+.emailoctopus-form-embed {
+    min-height: 48px;
 }
 
 .site-footer {
@@ -632,11 +662,14 @@ a { color: inherit; }
     }
 
     .bar-label { text-align: left; }
+
+    .notification-signup-content h3 { font-size: 19px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .article-list a,
+    .notification-toggle,
     .bar-fill,
     .note-icon,
     .nerd-note summary,

@@ -32,7 +32,12 @@
         <section class="writing-index" aria-labelledby="writing-heading">
             <div class="index-heading">
                 <h2 id="writing-heading">Writings</h2>
-                <span>Newest first</span>
+                <button
+                    type="button"
+                    class="notification-toggle"
+                    aria-expanded="false"
+                    aria-controls="notification-signup"
+                >Notify Me</button>
             </div>
             <ol class="article-list">
                 <li>
@@ -45,11 +50,27 @@
                     </a>
                 </li>
             </ol>
+            <div class="notification-signup-content" id="notification-signup" hidden>
+                <h3>Get notified when a new article drops</h3>
+                <div class="emailoctopus-form-embed">
+                    <script async src="https://eomail5.com/form/5bb78826-baa9-11f1-a89b-2345e5741418.js" data-form="5bb78826-baa9-11f1-a89b-2345e5741418"></script>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer class="site-footer">
         <a href="https://junggeyy.github.io/" target="_blank">junggeyy.github.io</a>
     </footer>
+    <script>
+        const notificationToggle = document.querySelector('.notification-toggle');
+        const notificationSignup = document.getElementById('notification-signup');
+
+        notificationToggle.addEventListener('click', () => {
+            const isExpanded = notificationToggle.getAttribute('aria-expanded') === 'true';
+            notificationToggle.setAttribute('aria-expanded', String(!isExpanded));
+            notificationSignup.hidden = isExpanded;
+        });
+    </script>
 </body>
 </html>
